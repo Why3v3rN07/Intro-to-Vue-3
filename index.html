@@ -16,9 +16,12 @@
         <div class="product-container">
           <div class="product-image">
             <!-- image goes here -->
+            <img v-bind:src="image"/> <!-- v-bind reactively binds an attribute to an expression -- 
+            in this case, the src attribute to the "image" data. just  imagine {{}} around image. -->
           </div>
           <div class="product-info">
-            <h1>{{ product }}</h1>
+            <h1><a :href="url"> {{ product }} </a></h1> 
+            <!-- for shorthand you can skip the v-bind, just do : -->
           </div>
         </div>
       </div>
