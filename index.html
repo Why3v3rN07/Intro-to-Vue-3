@@ -19,6 +19,10 @@
           </div>
           <div class="product-info">
             <h1>{{ product }}</h1>
+            <p v-if="inventory > 10">In stock</p> <!-- if inventory is greater than 10, display this -->
+            <p v-else-if="inventory > 0">Almost gone!</p> <!-- else if inventory is greater than 0, display this -->
+            <p v-else>Out of stock</p> <!-- else display this-->
+            <p v-show="onSale">Sale: {{ salePercent }}% off!</p> <!-- show/hide depending on onSale -->
           </div>
         </div>
       </div>
